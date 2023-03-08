@@ -1,6 +1,6 @@
 /** *
  * @param {num} num: Number of elements
- * @returns: The result array of the fibanocci sequence
+ * @returns: The result array of the fibonacci sequence
  */
 function fibsRec(num) {
   return num <= 0

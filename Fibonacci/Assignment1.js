@@ -1,5 +1,5 @@
 /**
- * Solving the Fibanocci sequence using iteration.
+ * Solving the Fibonacci sequence using iteration.
  * @param {num} num : The number of elements
  * @returns: The array of elements of the fibonacci sequence
  */
