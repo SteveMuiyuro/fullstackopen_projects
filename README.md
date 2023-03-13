@@ -1,3 +1,9 @@
-## Project Linked List
+# Project_Binary_Search_Trees
 
-This project is par of the Odin Project assignment meant to test the design and application of linked list as a data structure in javascript.
+This is  part of an Evaluation to test the understanding and application of `Binary Trees` using javascript.
+
+
+
+
+
+
