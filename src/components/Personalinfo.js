@@ -4,6 +4,7 @@ export default function Personal({ name, email, contacts, linkedin }) {
   return (
     <div className="container">
       <div className="personal">
+        <button className="info-btn">Edit</button>
         <h2 className="sub-header">Personal Info</h2>
         <div className="info">
           <h3>Name: </h3> {name}

@@ -5,6 +5,7 @@ export default function WorkExp({ company, title, period, roles }) {
   return (
     <div class="container">
       <div className="work-exp">
+        <button className="work-btn">Edit</button>
         <h2 className="sub-header">Work Experience</h2>
         <div className="wex">
           <h3>Company: </h3>
