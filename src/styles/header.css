@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lato&family=Poppins&family=Prompt&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.header-container {
+  height: 100px;
+  width: 50%;
+  background-color: #1e1b4b;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2rem;
+  color: #ea580c;
+  border-radius: 2px;
+}
+
+img {
+  border-radius: 50%;
+  height: 80px;
+}
+
+.profile,
+.work-exp,
+.education,
+.skill,
+.personal {
+  background-color: #1e1b4b;
+  color: #f5f5f4;
+  width: 50%;
+}
+
+.sub-header,
+.summary,
+.wex,
+.edu,
+.sk,
+.info {
+  padding-left: 9rem;
+  padding-right: 9rem;
+}
+
+.sub-header {
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  color: #ea580c;
+}
+.summary,
+.wex,
+.edu,
+.sk,
+.info {
+  text-align: justify;
+  font-size: medium;
+  padding-bottom: 10px;
+}
+
+.list-items {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
+
+.info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-bottom: 10px;
+}

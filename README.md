@@ -1,9 +1,5 @@
-# Project_Binary_Search_Trees
+# CV Generator
 
-This is  part of an Evaluation to test the understanding and application of `Binary Trees` using javascript.
+This is part of the [Odin Project](https://www.theodinproject.com/lessons/node-path-javascript-cv-application) curriculumn project. Skills tested:
 
-
-
-
-
-
+**`React.js`**
