@@ -9,10 +9,16 @@ import { skills } from "./data";
 import Skill from "./components/Skills";
 import "./styles/header.css";
 import Personal from "./components/Personalinfo";
+import InfoInput from "./components/InfoInput";
+import "./styles/input.css";
+import SummaryInput from "./components/SummaryInput";
 
 export default function App() {
   return (
     <div>
+      <InfoInput />
+      <SummaryInput />
+
       <Header
         src="https://i.pinimg.com/474x/08/e1/07/08e1074b36d375d4feb3e01da81d9a96.jpg"
         alt="Pic of a Person"
@@ -24,7 +30,7 @@ export default function App() {
         contacts={data.contacts}
         linkedin={data.linkedin}
       />
-      <Profile profileSum="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor gravida odio ac tempor. Suspendisse ut elit nisl. Suspendisse efficitur lectus a nulla mollis, id placerat massa ullamcorper. Maecenas pellentesque tempus orci, eu malesuada tortor suscipit sed. Cras sagittis quam ut tristique tristique. Fusce fermentum, turpis et blandit sodales, felis arcu mattis leo, laoreet dignissim urna diam aliquet erat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus." />
+      <Profile profileSum={data.summary} />
 
       <WorkExp
         company={data.company}

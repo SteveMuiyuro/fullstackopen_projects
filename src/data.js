@@ -3,6 +3,8 @@ const data = {
   email: "stevemuiyuro@gmail.com",
   contacts: "0245 454 352",
   linkedin: "linkedin/stevemwangi",
+  summary:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porttitor gravida odio ac tempor. Suspendisse ut elit nisl. Suspendisse efficitur lectus a nulla mollis, id placerat massa ullamcorper. Maecenas pellentesque tempus orci, eu malesuada tortor suscipit sed. Cras sagittis quam ut tristique tristique. Fusce fermentum, turpis et blandit sodales, felis arcu mattis leo, laoreet dignissim urna diam aliquet erat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
   company: "British American Tobacco",
   title: "Manager",
   period: 2022,

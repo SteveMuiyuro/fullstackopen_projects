@@ -8,10 +8,15 @@
   padding: 0;
   font-family: "Poppins", sans-serif;
 }
+
+body {
+  height: 100vh;
+}
 .container {
   width: 100%;
   display: flex;
   justify-content: center;
+  display: none;
 }
 
 .header-container {
@@ -92,6 +97,13 @@ img {
   left: 50rem;
   top: 8rem;
   cursor: pointer;
+  transition: all 0.3ms ease-in;
+}
+
+.info-btn:hover {
+  background-color: #f5f5f4;
+  color: #ea580c;
+  border: 1px solid #ea580c;
 }
 .profile-btn {
   height: 2rem;
@@ -106,6 +118,13 @@ img {
   left: 50rem;
   top: 11.5rem;
   cursor: pointer;
+  transition: all 0.5ms ease-in-out;
+}
+
+.profile-btn:hover {
+  background-color: #f5f5f4;
+  color: #ea580c;
+  border: 1px solid #ea580c;
 }
 
 .work-btn {
@@ -121,6 +140,13 @@ img {
   left: 50rem;
   top: 25rem;
   cursor: pointer;
+  transition: all 0.3ms ease-in-out;
+}
+
+.work-btn:hover {
+  background-color: #f5f5f4;
+  color: #ea580c;
+  border: 1px solid #ea580c;
 }
 
 .edu-btn {
@@ -136,6 +162,12 @@ img {
   left: 50rem;
   top: 10.5rem;
   cursor: pointer;
+  transition: all 0.3ms ease-in-out;
+}
+.edu-btn:hover {
+  background-color: #f5f5f4;
+  color: #ea580c;
+  border: 1px solid #ea580c;
 }
 
 .skill-btn {
@@ -151,4 +183,10 @@ img {
   left: 50rem;
   top: 7rem;
   cursor: pointer;
+  transition: all 0.3ms ease-in-out;
+}
+.skill-btn:hover {
+  background-color: #f5f5f4;
+  color: #ea580c;
+  border: 1px solid #ea580c;
 }
