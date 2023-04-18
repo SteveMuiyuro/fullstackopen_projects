@@ -1,5 +1,3 @@
-# CV Generator
+# Project Business Card
 
-This is part of the [Odin Project](https://www.theodinproject.com/lessons/node-path-javascript-cv-application) curriculumn project. Skills tested:
-
-**`React.js`**
+THis is a short project that demonstrates skills compentency on `React Functional Components`
