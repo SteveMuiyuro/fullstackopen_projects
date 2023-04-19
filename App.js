@@ -1,16 +1,24 @@
 import React from "react"
-import PersonalInfo from "./components/PersonalInfo"
-import About from "./components/About"
-import Interests from "./components/Interests"
-import Footer from "./components/Footer"
+import NavBar from "./NavBar"
+import data from "./data"
+import Card from "./Card"
 
-export default function App(){
+export default function App()
+{
+    
+    const details = data.map(detail => <Card 
+    key={detail.id}
+    {...detail}
+    />)
+     
+    
+    
     return(
-        <div className="container">
-            <PersonalInfo />
-            <About />
-            <Interests />
-            <Footer />
+        <div>
+            <NavBar />
+                <section>
+                    {details}
+               </section>
         </div>
     )
 }

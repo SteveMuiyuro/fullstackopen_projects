@@ -1,192 +1,95 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lato&family=Poppins&family=Prompt&display=swap');
-
 * {
     box-sizing: border-box;
 }
 
+
 body{
- margin:0;   
- font-family: 'inter', sans-serif;
- /* height:868px; */
+    font-family: 'Poppins', sans-serif;    
+    margin:0;
+   
 }
 
-.image{
-    height:317px;
-    width:317px;
-    border-radius: 10px 10px 0px 0px;
-}
 
-.container{
-    height:100%;
-    width:550px;
-    margin: 0 auto;
-    padding: 44px 116px;
-    background-color: #23252C
-}
-
-.personal-info{
-   text-align: center;   
-   padding-top:21px;
-   padding-bottom: 16px;
- 
-}
-
-.name{
-    margin:0px;
-    font-size:25px;
-    font-weight:700;
-    line-height: 30px;
-    padding-bottom: 6px;
+.nav-bar{
+    height:55px;
+    background: #F55A5A;
+    font-size: 15px;
     color:#FFFFFF;
-
-}
-
-.title{
-    margin:0px;
-    padding-bottom: 9px;
-    color:#F3BF99;
-    font-size: 12.8px;
-    line-height: 15px;
-
-}
-
-.website{
-    margin:0px;
-    padding-bottom: 15px;
-    color: #F5F5F5;
-    font-size: 10.24px;
-    line-height: 150%; 
-
-}
-
-.container-1{
-    background-color: #1A1B21;
-    
-
-}
-
-.buttons{
-    display: flex;
-    justify-content:center;
-    gap:17px;
-    padding-bottom: 33px;
-    
-}
-
-.email-btn{
-    display: flex;
+    line-height: 17px;
+    display:flex;
     justify-content: center;
-    align-items: center;    
-    padding: 9px 13px 9px 11px;
-    width: 115px;
-    height: 34px;
-    background: #FFFFFF;   
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
-    border-radius: 6px;
-    font-size: 14px;
-    line-height: 16px;
-    color: #374151;
-    font-weight:500;
-    transition: all 1ms ease-in
-}
-.email-btn:hover{
-    background:#d1d5db;
-}
-
-.linkedIn-btn{
-     display: flex; 
-     justify-content: center;
-     align-items: center;   
-     padding: 11px 13px 9px 11px;
-     width: 115px;
-     height: 34px;
-     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
-     border-radius: 6px;
-     background: #5093E2;
-     color: #FFFFFF;
-     font-size: 14px;
-     line-height: 16px;
-     transition: all 1ms ease-in;
-      font-weight:500;
-      
-}
-
-.linkedIn-btn:hover{
-    background: #0284c7;
-    
-}
-.about-container{
-    background: #1A1B21;
-    padding-right:34px;
-    padding-left:34px;
-    padding-bottom:27px;
+    align-items: center;
+    margin-bottom:20px
 
 }
 
-.about{
-    margin:0px;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 150%;
-    color:#F5F5F5;
-    padding-bottom:5px;
-
-
-    
+nav > span {
+    padding-left:7px;
 }
 
-.about-info{
-        margin:0;
-        padding-top:5px;
-        color:#DCDCDC;
-        width: 247px;
-        height: 75px;
-        font-weight: 400;
-         font-size: 10.24px;
-        line-height: 150%;
-
-    
-}
-
-.interests-container{
-    background: #1A1B21;
-    padding-right:34px;
-    padding-left:34px;
-    padding-bottom:24px;
-
-}
-
-.interests-info{
+.description{
 font-weight: 400;
 font-size: 10.24px;
 line-height: 150%;
-width: 247px;
-height: 61px;
-color: #DCDCDC;
+max-width:326px;
+}
+
+.period{
+font-weight: 700;
+font-size: 10.24px;
+line-height: 12px;
+color: #2B283A;
+}
+
+.title{
+font-weight: 700;
+font-size: 25px;
+line-height: 30px;
+color: #2B283A;
+margin:0px
+}
+
+.card{
+    display:flex;
+    padding:20px;
+    margin: auto 20px;
     
 }
 
-.interests-title{
-margin:0px;
-font-weight: 700;
-font-size: 16px;
-line-height: 150%;
-color: #F5F5F5;
-width: 242.71px;
-height: 21px;
-padding-bottom:5px;
-}
+/* .section{
+    margin-left:40px;
+} */
 
-.footer-items{
+.spans{
     display:flex;
-    justify-content: space-around;
-    width: 317px;
-    height: 64px;
-    background: #161619;
-    border-radius: 0px 0px 10px 10px;
-    padding:20px 73px
+    align-items: center;
+    padding-bottom:4px;
+    padding-top:15px;
+    
 }
 
-span{
-    padding-left:8px
+.card-info{
+    padding-left:20px;
+    text-align: start;
+}
+
+.location{
+font-weight: 400;
+font-size: 10.24px;
+line-height: 12px;
+letter-spacing: 0.17em;
+color: #2B283A;
+}
+
+a{
+font-weight: 400;
+font-size: 10.24px;
+line-height: 12px;
+text-decoration-line: underline;
+padding-left:12px;
+color: #918E9B;
+}
+
+section{
+    height:100%
 }
