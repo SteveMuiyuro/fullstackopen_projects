@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Inter:wght@400;500;600;700&family=Karla&family=Lato&family=Poppins&family=Prompt&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 250px;
+  font-family: "Karla", sans-serif;
+}
+
+.die-content {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.container {
+  background-color: #0b2434;
+  width: 460px;
+  height: 479px;
+  padding: 30px;
+}
+
+button {
+  background: #5035ff;
+  padding: 1rem 2.5rem;
+  color: #f5f5f5;
+  font-size: 17px;
+  line-height: 20px;
+  border: none;
+  box-shadow: 0px 3.2px 7.68px rgba(0, 0, 0, 0.18);
+  border-radius: 3.81277px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.dice {
+  background: #ffffff;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+  border-radius: 3.81277px;
+  color: #2b283a;
+  font-weight: 700;
+  font-size: 20.5889px;
+  line-height: 24px;
+  text-align: center;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dice-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.title-content {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.title-content > p {
+  margin: 0px;
+}
