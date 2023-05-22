@@ -1,3 +1,3 @@
-#Project Tenzies
+## Project_Champions_Endorsements
 
-This is a simple game designed that applies the foundation and intermediate use case of REatc hooks namely `useState` and `useEffect`
+This is a simple CRUD application that use firbase to store and update and delete data.
