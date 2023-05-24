@@ -8,4 +8,4 @@ participant server
     deactivate server
 
 
-    Note right of browser: The browser executes the javascript code form the server that renders the notes
+    Note right of browser: The browser executes the javascript code form the server that fetches the JSON file and renders the notes
