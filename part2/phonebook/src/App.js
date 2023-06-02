@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Filter from "./components/Filter";
 import AddPerson from "./components/AddPerson";
 import RenderPhone from "./components/RenderPhone";
+import axios from "axios";
 const App = () => {
-  const [persons, setPersons] = useState([
-    { name: "Arto Hellas", number: "0725658284", id: "Arto Hellas" },
-  ]);
+  const [persons, setPersons] = useState([]);
   const [newName, setNewName] = useState("");
   const [newNumber, setNewNumber] = useState("");
   const [search, setSearch] = useState("");
@@ -13,6 +12,12 @@ const App = () => {
   const filteredNames = persons.filter((person) =>
     person.name.includes(search)
   );
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:3001/persons")
+      .then((response) => setPersons(response.data));
+  }, []);
 
   function addPerson(e) {
     e.preventDefault();
