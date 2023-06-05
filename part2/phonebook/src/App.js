@@ -3,6 +3,8 @@ import Filter from "./components/Filter";
 import AddPerson from "./components/AddPerson";
 import RenderPhone from "./components/RenderPhone";
 import axios from "axios";
+import promiseFunctions from "./service/notes";
+
 const App = () => {
   const [persons, setPersons] = useState([]);
   const [newName, setNewName] = useState("");
@@ -14,29 +16,8 @@ const App = () => {
   );
 
   useEffect(() => {
-    axios
-      .get("http://localhost:3001/persons")
-      .then((response) => setPersons(response.data));
+    promiseFunctions.getAll().then((allData) => setPersons(allData));
   }, []);
-
-  function addPerson(e) {
-    e.preventDefault();
-    const newPerson = {
-      name: newName,
-      number: newNumber,
-      id: newName,
-    };
-    const nameExists = persons.some((person) => person.name === newName);
-    if (!nameExists) {
-      setPersons((prev) => [...prev, newPerson]);
-      setNewName("");
-      setNewNumber("");
-    } else {
-      alert(`${newName} already in phonebook`);
-      setNewName("");
-      setNewNumber("");
-    }
-  }
 
   function handleChangeName(e) {
     const { value } = e.target;
@@ -52,11 +33,66 @@ const App = () => {
     const { value } = e.target;
     setSearch(value);
   }
+
+  function removePerson(id) {
+    const targetPerson = persons.find((person) => person.id === id);
+    alert(`Delete ${targetPerson.name}`);
+    promiseFunctions
+      .remove(id, targetPerson)
+      .then(() =>
+        setPersons((prev) => prev.filter((person) => person.id !== id))
+      );
+  }
+
   const personsInfo = filteredNames.map((person) => (
-    <p key={person.id}>
-      {person.name} {person.number}
-    </p>
+    <div key={person.id}>
+      <p key={person.id}>
+        {person.name} {person.number}
+        <button
+          key={person.id}
+          id={person.id}
+          onClick={() => removePerson(person.id)}
+        >
+          Delete
+        </button>
+      </p>
+    </div>
   ));
+
+  function updateNumber(id) {
+    const targetNumber = persons.find((person) => person.id === id);
+    const updatedPerson = { ...targetNumber, number: newNumber };
+    promiseFunctions
+      .update(id, updatedPerson)
+      .then((newData) =>
+        setPersons((prev) =>
+          prev.map((person) => (person.id !== id ? person : newData))
+        )
+      );
+    setNewName("");
+    setNewNumber("");
+  }
+
+  function addNumber(e) {
+    e.preventDefault();
+    const newPerson = { name: newName, number: newNumber };
+    const nameExists = persons.some((person) => person.name === newName);
+    if (!nameExists) {
+      promiseFunctions
+        .create(newPerson)
+        .then((newInfo) => setPersons((prev) => [...prev, newInfo]));
+      setNewName("");
+      setNewNumber("");
+    } else {
+      alert(
+        `${newName} already added to phonebook, replace the old number with new one?`
+      );
+
+      const existingPerson = persons.find((person) => person.name === newName);
+
+      updateNumber(existingPerson.id);
+    }
+  }
 
   return (
     <div>
@@ -67,11 +103,12 @@ const App = () => {
 
       <h2>Add New Number</h2>
       <AddPerson
-        addPerson={addPerson}
+        // addPerson={addPerson}
         newName={newName}
         handleChangeName={handleChangeName}
         handleChangeNumber={handleChangeNumber}
         newNumber={newNumber}
+        addNumber={addNumber}
       />
 
       <h2>Numbers</h2>
