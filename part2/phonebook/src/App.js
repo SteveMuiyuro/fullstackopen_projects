@@ -68,7 +68,12 @@ const App = () => {
         setPersons((prev) =>
           prev.map((person) => (person.id !== id ? person : newData))
         )
-      );
+      )
+      .catch((err) => {
+        alert(
+          `the person ${updatedPerson.name} was already deleted from the server`
+        );
+      });
     setNewName("");
     setNewNumber("");
   }
@@ -81,6 +86,7 @@ const App = () => {
       promiseFunctions
         .create(newPerson)
         .then((newInfo) => setPersons((prev) => [...prev, newInfo]));
+
       setNewName("");
       setNewNumber("");
     } else {
