@@ -17,7 +17,6 @@ export default function Country(props) {
     return `https://openweathermap.org/img/wn/${icn}@2x.png`;
   }
 
-  console.log(country);
   const { temp } = weather.main;
   const { icon } = weather.weather[0];
   const { speed } = weather.wind;

@@ -4,12 +4,15 @@ import AddPerson from "./components/AddPerson";
 import RenderPhone from "./components/RenderPhone";
 import axios from "axios";
 import promiseFunctions from "./service/notes";
+import Notification from "./components/Notification";
 
 const App = () => {
   const [persons, setPersons] = useState([]);
   const [newName, setNewName] = useState("");
   const [newNumber, setNewNumber] = useState("");
   const [search, setSearch] = useState("");
+  const [addMessage, setAddMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const filteredNames = persons.filter((person) =>
     person.name.includes(search)
@@ -70,9 +73,12 @@ const App = () => {
         )
       )
       .catch((err) => {
-        alert(
+        setErrorMessage(
           `the person ${updatedPerson.name} was already deleted from the server`
         );
+        setTimeout(() => {
+          setErrorMessage("");
+        }, 5000);
       });
     setNewName("");
     setNewNumber("");
@@ -86,7 +92,12 @@ const App = () => {
       promiseFunctions
         .create(newPerson)
         .then((newInfo) => setPersons((prev) => [...prev, newInfo]));
-
+      setTimeout(() => {
+        setAddMessage(`${newPerson.name} has been added in phonebook`);
+      }, 5000);
+      setTimeout(() => {
+        setAddMessage("");
+      }, 10000);
       setNewName("");
       setNewNumber("");
     } else {
@@ -103,6 +114,8 @@ const App = () => {
   return (
     <div>
       <h2>Phonebook</h2>
+      <Notification message={addMessage} error={errorMessage} />
+
       <div>
         <Filter search={search} handleChangeSearch={handleChangeSearch} />
       </div>
